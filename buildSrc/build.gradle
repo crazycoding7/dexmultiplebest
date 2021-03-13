@@ -1,0 +1,63 @@
+// 语言使用groovy，也可以采用其他的，自行修改即可。
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    // 包含了AMS字节码注入工具
+    implementation "com.android.tools.build:gradle:3.5.2"
+    implementation gradleApi()
+    implementation localGroovy()
+    implementation files('libs/javassist.jar')    //groovy sdk
+
+}
+
+sourceSets {
+    main {
+        groovy {
+            srcDir 'src/main/groovy'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        google()
+        jcenter()
+    }
+}
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.project {
+                groupId 'com.plugin.demo' //决定jar文件生成的目录
+                artifactId 'plugin-test'  //模块的名称
+                version '1.0.0'  //指定版本号
+                description project.description ?:''
+                packaging 'jar'
+            }
+            //文件发布到下面目录
+            repository(url: uri('../release'))
+            //发布到远程服务端
+            // repository(url: "http://www.xxx.com/repos") {
+            // authentication(userName: "xxx", password: "xxx")
+            // }
+        }
+    }
+}

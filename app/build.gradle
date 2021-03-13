@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.plugin.gradle'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.example.aidl.myapplicationttt"
+        minSdkVersion 16
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+//        debug{
+//            applicationVariants.all { variant ->
+//                def dexTask = project.tasks.findByName("transformClassesWithDexForDebug")
+//                def preDexTask = project.tasks.findByName("transformClassesWithPreDexForDebug")
+//                project.logger.error "======preDexTask===12331==="+dexTask
+//
+//                if(preDexTask) {
+//                    project.logger.error "======preDexTask======"
+//                    preDexTask.inputs.files.files.each {file ->
+//                        project.logger.error "inputs =$file.absolutePath"
+//                    }
+//
+//                    preDexTask.outputs.files.files.each {file ->
+//                        project.logger.error "outputs =$file.absolutePath"
+//                    }
+//                }
+//                if(dexTask) {
+//                    project.logger.error "======dexTask======"
+//                    dexTask.inputs.files.files.each {file ->
+//                        project.logger.error "inputs =$file.absolutePath"
+//                    }
+//
+//                    dexTask.outputs.files.files.each {file ->
+//                        project.logger.error "outputs =$file.absolutePath"
+//                    }
+//                }
+//            }
+//        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation files('libs/javassist.jar')
+}
+
+//apply plugin: HelloPlugin
+//
+//class HelloPlugin implements Plugin<Project>{
+//    @Override
+//    void apply(Project project) {
+//        project.task('testPlugin')  {
+//            println 'hello, plugin!'
+//        }
+//    }
+//}
+
+

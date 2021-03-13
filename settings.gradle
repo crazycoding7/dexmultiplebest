@@ -1,0 +1,4 @@
+include ':hack'
+include ':app'
+include ':buildSrc'
+rootProject.name = "DexMultipleForHotFix"
