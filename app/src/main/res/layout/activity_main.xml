@@ -11,4 +11,17 @@
         android:onClick="click"
         android:text="喵叫.."/>
 
+    <Button
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="clickPlugin"
+        android:text="加载插件apk图片资源" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
 </LinearLayout>
