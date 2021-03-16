@@ -22,16 +22,16 @@ public class HotPatchApplication extends Application {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         // 加载assert中的hack.jar
-        init(this);
-
-        // 获取SdCard中的补丁，如果存在就执行注入操作
-        String dexPath = getExternalFilesDir(null) + "/" + Hot_DEX;
-        File file = new File(dexPath);
-        if (file.exists()) {
-            loadPatch(this, dexPath);
-        } else {
-            Log.e("BugFixApplication", dexPath + "不存在");
-        }
+//        init(this);
+//
+//        // 获取SdCard中的补丁，如果存在就执行注入操作
+//        String dexPath = getExternalFilesDir(null) + "/" + Hot_DEX;
+//        File file = new File(dexPath);
+//        if (file.exists()) {
+//            loadPatch(this, dexPath);
+//        } else {
+//            Log.e("BugFixApplication", dexPath + "不存在");
+//        }
     }
 
     public static void init(Context context) {

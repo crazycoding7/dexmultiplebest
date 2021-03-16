@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./zHookLib/libs/zhook.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/zHookLib/libs/zhook.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

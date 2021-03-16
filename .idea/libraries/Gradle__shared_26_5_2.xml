@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: shared-26.5.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/shared/26.5.2/4ddbcb9beb26171fb7fa1940536ccd3845bbfb37/shared-26.5.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.android.tools.analytics-library/shared/26.5.2/f8d939d69b8579353b1a88bfe60075fbd45a088c/shared-26.5.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

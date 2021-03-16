@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.plugin.gradle'
+//apply plugin: 'com.plugin.gradle'
 
 android {
     compileSdkVersion 30
@@ -57,6 +57,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation files('libs/javassist.jar')
+    //implementation project(path: ':zHookLib')
 }
 
 //apply plugin: HelloPlugin

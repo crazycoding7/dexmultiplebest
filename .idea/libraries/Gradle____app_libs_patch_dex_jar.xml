@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: ./app/libs/patch_dex.jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/patch_dex.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
